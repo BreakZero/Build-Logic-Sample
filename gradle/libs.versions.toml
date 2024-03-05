@@ -1,21 +1,26 @@
 [versions]
 compose-bom = "2023.08.00"
-compose-compiler = "1.5.1"
+compose-compiler = "1.5.9"
 compose-activity = "1.7.2"
 compose-lifecycle-runtime = "2.6.1"
 
 # For plugins
-org-jetbrains-kotlin = "1.9.0"
+org-jetbrains-kotlin = "1.9.22"
 android-gradle-plugin = "8.1.1"
 
 # For tools
 koin = "3.4.1"
+ksp = "1.9.0-1.0.13"
+hilt = "2.48"
 
 # For testing
 junit = "4.13.2"
 androidx-test-ext-junit = "1.1.5"
 espresso-core = "3.5.1"
 jacoco = "0.8.10"
+core-ktx = "1.12.0"
+appcompat = "1.6.1"
+material = "1.9.0"
 
 [libraries]
 # For Compose
@@ -36,15 +41,26 @@ koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin"
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
 
+hilt-classpath = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt"}
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+
 # for testing
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 # For app
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+hilt = { id = "dagger.hilt.android.plugin" }
+
+androidLibrary = { id = "com.android.library", version.ref = "android-gradle-plugin" }
 
 
 [bundles]
