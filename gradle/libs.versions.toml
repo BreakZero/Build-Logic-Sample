@@ -73,13 +73,3 @@ compose-android-bundle = [
     "androidx-compose-material-icons-core",
     "androidx-compose-material-icons-extended"
 ]
-koin-android-bundle = [
-    "koin-core",
-    "koin-android",
-    "koin-compose"
-]
-junit-test-bundle = [
-    "androidx-test-ext-junit",
-    "espresso-core",
-    "ui-test-junit4"
-]
