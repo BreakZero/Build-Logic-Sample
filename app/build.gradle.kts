@@ -1,6 +1,6 @@
 plugins {
-    id("easy.android.application.compose")
-    id("jacoco")
+    id("org.easy.android.application.compose")
+    id("org.easy.jacoco")
 }
 
 android {
